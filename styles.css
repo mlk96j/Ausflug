@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.paragraph-box {
+    background-color: darkgreen;
+    border: 2px solid darkred;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
