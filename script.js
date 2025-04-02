@@ -32,10 +32,16 @@ async function loadSection() {
     let response = await fetch("status.txt");
     let text = await response.text();
     let lines = text.split("\n");
-    
-    let currentSection = parseInt(lines[0]);
-    let likes = lines.slice(1).map(line => line.split(" ").map(Number));
 
+    let currentSection = parseInt(lines[0]);
+
+    // 🔴 Falls die Tour beendet ist (Status = 4), zur final.html weiterleiten
+    if (currentSection >= 4) {
+        window.location.href = "final.html";
+        return;
+    }
+
+    let likes = lines.slice(1).map(line => line.split(" ").map(Number));
     let section = sections[currentSection - 1];
 
     if (!section) {
